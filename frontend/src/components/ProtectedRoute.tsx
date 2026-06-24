@@ -10,14 +10,14 @@ interface Props {
 const ProtectedRoute: React.FC<Props> = ({ children, allowedRoles }) => {
   const token = localStorage.getItem('token');
   if (!token) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   try {
     const decoded: any = jwtDecode(token);
     const role = decoded.role || localStorage.getItem('role');
     if (!allowedRoles.includes(role)) {
-      return <Navigate to="/" replace />;
+      return <Navigate to="/login" replace />;
     }
     return <>{children}</>;
   } catch {

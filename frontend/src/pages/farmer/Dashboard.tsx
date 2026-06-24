@@ -88,7 +88,7 @@ const FarmerDashboard: React.FC = () => {
     } catch (error: any) {
       toast.error(error.response?.data?.message || 'Failed to load farmer dashboard');
       if (error.response?.status === 401 || error.response?.status === 403) {
-        navigate('/farmer/login');
+        navigate('/login');
       }
     } finally {
       setLoading(false);

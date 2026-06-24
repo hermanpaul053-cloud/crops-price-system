@@ -6,7 +6,6 @@ import {
   Phone, 
   MapPin, 
   TrendingUp, 
-  Shield, 
   Users,
   Smartphone,
   MessageSquare,
@@ -121,6 +120,20 @@ const LandingPage: React.FC = () => {
       >
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-orange-500/20"></div>
+        <div className="absolute inset-x-0 top-0 z-30">
+          <div className="container mx-auto px-4 py-5 flex items-center justify-between">
+            <Link to="/" className="text-2xl font-bold text-primary">Crop Price</Link>
+            <div className="flex items-center gap-3">
+              <Link to="/auth" className="text-sm font-medium text-gray-700 hover:text-primary">Register</Link>
+              <Link
+                to="/login"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-primary shadow-sm shadow-primary/10 hover:bg-primary/10"
+              >
+                Login
+              </Link>
+            </div>
+          </div>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -140,7 +153,7 @@ const LandingPage: React.FC = () => {
                 Get real-time crop prices from markets across Tanzania. Make informed decisions and maximize your profits.
               </p>
               
-              <div className="flex flex-wrap gap-4">
+              {/* <div className="flex flex-wrap gap-4">
                 <Link
                   to="/auth"
                   className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg shadow-primary/30"
@@ -150,14 +163,7 @@ const LandingPage: React.FC = () => {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 
-                <Link
-                  to="/admin/login"
-                  className="inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-lg hover:bg-secondary/90 transition-all hover:scale-105 shadow-lg shadow-secondary/30"
-                >
-                  <Shield className="w-5 h-5" />
-                  Admin Login
-                </Link>
-              </div>
+                </div> */}
               
               <div className="flex items-center gap-8 text-sm text-gray-500">
                 <div className="flex items-center gap-2">

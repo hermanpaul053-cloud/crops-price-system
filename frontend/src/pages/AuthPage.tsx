@@ -127,7 +127,7 @@ const AuthPage: React.FC = () => {
         </form>
         <p className="mt-4 text-center text-sm text-gray-600">
           Already registered?{' '}
-          <Link to="/farmer/login" className="text-primary hover:underline">
+          <Link to="/login" className="text-primary hover:underline">
             Login
           </Link>
         </p>
